@@ -1,8 +1,8 @@
 import React from "react";
-import { DialogContent, DialogTitle, DialogHeader } from "./ui/dialog";
+import { DialogContent, DialogTitle, DialogHeader } from "../ui/dialog";
 import { FileRejection, useDropzone } from "react-dropzone";
 import { toast } from "sonner";
-import { Card, CardContent } from "./ui/card";
+import { Card, CardContent } from "../ui/card";
 import {
   File,
   LoaderCircle,
