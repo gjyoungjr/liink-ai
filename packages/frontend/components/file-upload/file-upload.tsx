@@ -61,7 +61,7 @@ export function FileUploader({
 
       <div className="mx-auto max-w-2xl" {...getRootProps()}>
         <div className="mb-4 flex w-full items-center justify-center">
-          <label className="bg-secondary h-64 w-[450px] cursor-pointer rounded-lg border-2 border-dashed p-10">
+          <div className="bg-secondary h-64 w-[450px] cursor-pointer rounded-lg border-2 border-dashed p-10">
             <div className="flex flex-col items-center justify-center pb-6 pt-5">
               <svg
                 className="primary mb-3 h-10 w-10"
@@ -82,7 +82,7 @@ export function FileUploader({
                 and drop
               </p>
               <p className="text-muted-foreground text-sm">
-                Supported formats: PDF, TXT, CSV
+                Supported formats: CSV
               </p>
               <p className="text-muted-foreground text-sm">
                 {maxFileSizeInMB} MB max file size
@@ -94,7 +94,7 @@ export function FileUploader({
               className="hidden"
               {...getInputProps()}
             />
-          </label>
+          </div>
         </div>
 
         {/* Show the list of accepted files */}
@@ -105,10 +105,10 @@ export function FileUploader({
             return (
               <Card className="mb-2 h-[65px]" key={name}>
                 <CardContent className="mt-2">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mt-4">
                     <div className="flex items-start">
-                      <File className="mr-2 h-10 w-10" />
-                      <p className="text-muted-foreground mt-2 text-sm">
+                      <File className="mr-2 h-6 w-6" />
+                      <p className="text-muted-foreground text-sm">
                         {formattedFileName}
                       </p>
                     </div>

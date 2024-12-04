@@ -61,7 +61,6 @@ export function NavMain() {
     );
   }, []);
 
-  console.log("fileMenu", isFileUploadOpen);
   return (
     <SidebarMenu>
       {data.map((item) => (
@@ -69,7 +68,10 @@ export function NavMain() {
           <SidebarMenuButton asChild isActive={item.url === currentPathName}>
             {item.title === "Upload" ? (
               <a
-                onClick={() => setFileUploadOpen(true)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setFileUploadOpen(true);
+                }}
                 className="cursor-pointer"
               >
                 <item.icon />
@@ -87,7 +89,7 @@ export function NavMain() {
 
       <Dialog
         open={isFileUploadOpen}
-        onOpenChange={() => setFileUploadOpen(!isFileUploadOpen)}
+        onOpenChange={(isOpen) => setFileUploadOpen(isOpen)}
       >
         <FileUploader
           onUpload={onUpload}

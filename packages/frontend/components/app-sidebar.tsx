@@ -21,7 +21,7 @@ const data = {
     {
       name: "Liink",
       logo: Command,
-      plan: "Enterprise",
+      plan: "Beta",
     },
   ],
 
@@ -53,11 +53,11 @@ export async function AppSidebar({
             <SidebarMenuButton size="lg" asChild>
               <a href="#">
                 <div className="flex aspect-square size-7 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-3" />
+                  <span className="text-lg">🖇️</span>
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">Liink</span>
-                  <span className="truncate text-xs">Enterprise</span>
+                  <span className="truncate text-xs">Beta</span>
                 </div>
               </a>
             </SidebarMenuButton>
