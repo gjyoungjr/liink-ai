@@ -71,7 +71,6 @@ export default function LoginForm() {
             />
           </div>
           <Button className="w-full" disabled={false}>
-            {pending && <Loader className="mr-2 h-5 w-5 animate-spin" />}
             Log in
           </Button>
         </form>
